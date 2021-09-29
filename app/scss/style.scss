@@ -95,13 +95,113 @@
     width: 51px;
     height: 52px;
     border-radius: 50%;
-    background-color: #a3bbc8;
+    background-color: $bgcol;
     position: relative;
     &-img {
       position: absolute;
       left: 14px;
       top: 14px;
     }
+  }
+}
+
+.footer__top {
+  display: flex;
+  border-bottom: 1px solid $bgcol;
+  padding: 79px 0 75px;
+  &-logo {
+    margin-bottom: 15px;
+  }
+  &-address span,
+  &-phone span,
+  &-email span {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 32px;
+    color: $link;
+  }
+  &-contact {
+    width: 200px;
+    margin-right: 100px;
+  }
+  &-nav {
+    width: 120px;
+    margin-right: 180px;
+  }
+  &-item-form {
+    width: 270px;
+  }
+  &-title {
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+    color: #1f2044;
+    padding: 25px 0 13px;
+  }
+  &-item-text {
+    font-size: 14px;
+    line-height: 24px;
+    color: $link;
+    margin-bottom: 38px;
+  }
+  &-form {
+    display: flex;
+    &-input {
+      @extend %dmsans-400;
+      font-size: 12px;
+      color: $default;
+      padding: 0px 15px 0px 16px;
+      &::placeholder {
+        @extend %dmsans-400;
+        font-size: 12px;
+        color: #234969;
+      }
+    }
+    &-button {
+      background-color: $bgcol;
+      border: none;
+      @extend %dmsans-400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #fff;
+      padding: 9px 19px 9px 16px;
+      cursor: pointer;
+    }
+  }
+}
+
+.footer__top-address span,
+.footer__top-address, a {
+  line-height: 24px;
+}
+
+
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 34px 0 39px;
+  &-copy {
+    font-size: 14px;
+    line-height: 32px;
+    color: $link;
+  }
+  &-menu {
+    display: flex;
+  }
+  &-menu-item + .footer__bottom-menu-item {
+    padding-left: 28px;
+    position: relative;
+  }
+  &-menu-item + .footer__bottom-menu-item::before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 17px;
+    background-color: $link;
+    left: 13px;
+    top: 7px;
   }
 }
 
