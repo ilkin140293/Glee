@@ -29,3 +29,30 @@ a {
   padding: 0 15px;
   margin: 0 auto;
 }
+
+.title {
+  @extend %dmsans-700;
+  font-size: 36px;
+  line-height: 1.2;
+  color: #191919;
+  text-align: center;
+}
+
+
+.filter-buttons {
+  text-align: center;
+  margin-top: 15px;
+  &__btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0 13px;
+    @extend %dmsans-700;
+    line-height: 1.2;
+    color: #8b8b8b;
+    transition: all 0.3s;
+    &:hover {
+      color: #1a1a1a;
+    }
+  }
+}

@@ -8,5 +8,8 @@ $( function(){
     autoplaySpeed:3000
 
   })
+
+  var mixer = mixitup('.products__items');
+  var mixer = mixitup('.design__items');
   
 });
