@@ -56,3 +56,29 @@ a {
     }
   }
 }
+
+.breadcrumbs {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    color: #222933;
+    margin-right: 20px;
+    position: relative;
+    &::after {
+      content: '/';
+      position: absolute;
+      right: -14px;
+    }
+    &:last-child {
+      margin-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    color: inherit;
+  }
+}
