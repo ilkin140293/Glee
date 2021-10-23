@@ -27,3 +27,11 @@ $link: #7b7b7b;
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
 }
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
+}
