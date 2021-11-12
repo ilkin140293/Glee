@@ -136,3 +136,9 @@ a {
 .pagination-left {
   justify-content: flex-start;
 }
+
+@media (max-width: 450px) {
+  .title {
+    font-size: 22px;
+  }
+}
