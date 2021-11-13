@@ -1,9 +1,144 @@
 body {
-  
+  @extend %rubik-400;
+  font-size: 16px;
+  line-height: 30px;
+  color: $default;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+a {
+  @extend %rubik-400;
+  font-size: 14px;
+  line-height: 32px;
+  color: $link;
 }
 
 .wide-container {
-  min-width: 1800px;
+  max-width: 1800px;
   padding: 0 15px;
   margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.title {
+  @extend %dmsans-700;
+  font-size: 36px;
+  line-height: 1.2;
+  color: #191919;
+  text-align: center;
+}
+
+
+.filter-buttons {
+  text-align: center;
+  margin-top: 15px;
+  &__btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0 13px;
+    @extend %dmsans-700;
+    line-height: 1.2;
+    color: #8b8b8b;
+    transition: all 0.3s;
+    &:hover {
+      color: #1a1a1a;
+    }
+  }
+}
+
+.breadcrumbs {
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    color: #222933;
+    margin-right: 20px;
+    position: relative;
+    &::after {
+      content: '/';
+      position: absolute;
+      right: -14px;
+    }
+    &:last-child {
+      margin-right: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    color: inherit;
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__list {
+    display: flex;
+  }
+  &__list-item {
+    transition: all 0.3s;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #a3bbc8;
+    & + .pagination__list-item {
+      margin-left: 15px;
+    }
+    &:hover {
+      background-color: #a3bbc8;
+      color: #fff;
+    }
+  }
+  &__list-item--active {
+    background-color: #a3bbc8;
+    color: #fff;
+  }
+  &__list-link {
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  &__next {
+    cursor: pointer;
+    transition: all 0.3s;
+    height: 50px;
+    padding: 0 21px 0 19px;
+    border: 1px solid #a3bbc8;
+    margin-left: 16px;
+    line-height: 50px;
+    color: inherit;
+    font-size: 16px;
+    &:hover {
+      color: #fff;
+      background-color: #a3bbc8;
+    }
+  }
+}
+
+.pagination-left {
+  justify-content: flex-start;
+}
+
+@media (max-width: 450px) {
+  .title {
+    font-size: 22px;
+  }
 }

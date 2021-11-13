@@ -1,5 +1,7 @@
 $accent:#436372;
 $default: #243f4d;
+$bgcol: #a3bbc8;
+$link: #7b7b7b;
 
 %dmsans-400 {
   font-family: 'DM Sans', sans-serif;
@@ -24,4 +26,17 @@ $default: #243f4d;
 %rubik-500 {
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
+}
+
+%rubik-700 {
+  font-family: 'Rubik', sans-serif;
+  font-weight: 700;
+}
+
+%checkbox-hidden {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  position: absolute;
 }
